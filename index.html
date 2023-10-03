@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>5 Day Weather Forecast</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class ="bg-slate-950 bg-gradient-to-b from-violet-950 box-border">
+      <h1 class = "text-8xl font-bold underline text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 text-5xl font-extrabold font-mono pt-10>5 Day Weather Forecast">5 Day Weather Forecast</h1>
+    </header>
+
+    <main class = "bg-gradient-to-b from-slate-400">
+      <div class="h-screen flex items-left">
+        <form class="bg-gradient-to-r from-cyan-500 to-blue-500 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <div class="mb-4">
+            <label class="block text-gray-700 text-lg font-bold mb-2" for="city">
+              Search for a City
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="Input City Here">
+          </div>
+          <div class="flex items-center justify-between">
+            <button id ="search-button" class="text-amber-50 rounded-lg font-sans hover:font-bold btn bg-indigo-900 hover:bg-lime-500 py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+              Find Weather Forecast
+            </button>
+                <datalist id ="last-searched"></datalist>
+      </div>
+      </form>
+      
+      <section id="main-card">
+        <div id="current-date"></div>
+          <div id="current-weather" class = "text-white">
+            <span id= "weather logo">⛅</span>
+            <span id="current-temp">&degF</span>
+            <span id="current-wind">MPH</span>
+            <span id="current-humidity">%</span>
+          </div>
+      <div id = "5-day-card">
+          <h5 class = "5-day-date"></h5>
+            <p class="card-text" id="temperature"></p>
+            <p class="card-text" id="wind"></p>
+            <p class="card-text" id="humidity"></p>
+      </div>
+      </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
